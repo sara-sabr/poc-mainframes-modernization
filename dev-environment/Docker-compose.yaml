@@ -1,0 +1,17 @@
+version: '3'
+services:
+  mvs:
+    image: rattydave/docker-ubuntu-hercules-mvs:latest
+    ports:
+      - "3270:3270"
+      - "8038:8038"
+  x3270:
+    image: rattydave/docker-ubuntu-xrdp-mate-custom:v2-tools
+    ports:
+      - "3389:3389"
+      - "2222:22"
+    environment: 
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - ./terminal-home:/home
+    command: ["x3270", 'mvs:3270']
