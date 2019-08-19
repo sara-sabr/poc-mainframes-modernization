@@ -17,7 +17,7 @@ Research findings can be found in [SABA-SABR\ITResearch and Prototyping](https:/
 
 ## Getting Started
 
-To be filled out....
+1. [Setup your local development environment](./dev-environment/README.md).
 
 ## How to Contribute
 
